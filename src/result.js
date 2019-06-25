@@ -28,7 +28,8 @@ export default class ResultScreen extends React.Component {
   render() {
     return (
       <View style={styles.header}>
-        <Image style={{width:230, height:70, justifyContent: 'flex-start'}} source={require('./images/Syngenta_Logo.png')}/>
+        <Text>`\n\n\n`</Text>
+        <Image style={{width:230, height:70, justifyContent: 'flex-start'}} resizeMethod={'resize'} source={require('./images/Syngenta_Logo.png')}/>
           <View style={styles.container}>
             <Text style = {styles.welcome}>{'Your shipment with '}{this.state.ident}{' will arrive by: \n\n'}{this.state.delDate.toString()}{'.'}{`\n\n\n\n\n\n`}</Text>
           </View>

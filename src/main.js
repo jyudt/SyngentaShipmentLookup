@@ -98,10 +98,9 @@ export default class HomeScreen extends React.Component {
           textContent={'Loading...'}
           textStyle={styles.spinnerTextStyle}
         />
-        <Text>{`\n`}</Text>
-        <Image style={{width:230, height:70, justifyContent: 'flex-end'}} source={require('./images/Syngenta_Logo.png')}/>
+        <Image style={{width:230, height:70, justifyContent: 'flex-start'}} resizeMethod={'resize'} source={require('./images/Syngenta_Logo.png')}/>
         <View style={styles.container}>
-          <TextInput style={styles.instructions} placeholder="Shipment ID" onChangeText={(shipID) => this.setState({shipID})}/><Button onPress={() => {this.lookup("ShipID")}} title="Search"/>
+          <TextInput style={styles.instructions} placeholder="3Shipment ID" onChangeText={(shipID) => this.setState({shipID})}/><Button onPress={() => {this.lookup("ShipID")}} title="Search"/>
           <Text>{`\n\n\n`}</Text>
           <TextInput style={styles.instructions} placeholder="PO Number" onChangeText={(PONum) => this.setState({PONum})}/><Button onPress={() => {this.lookup("PONum")}} title="Search"/>
           <Text>{`\n\n\n\n\n\n`}</Text>
