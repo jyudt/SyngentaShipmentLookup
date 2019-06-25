@@ -30,4 +30,4 @@ Remember to remove environments.js before pushing to anything public.
 
 Problems with the image:  If it is anchored at the top outside of the text view, shorter devices will scroll the text input over it.  However, on taller devices, anchoring the image to the text input view leaves a lot of ugly space above it.  Ideas would be greatly appreciated.
 
-If you need to push to android hardware, reference this: (https://stackoverflow.com/questions/34175416/how-to-use-offline-bundle-on-android-for-react-native-project)
+If you need to push to android hardware, reference [this StackOverflow answer](https://stackoverflow.com/questions/34175416/how-to-use-offline-bundle-on-android-for-react-native-project)
