@@ -88,6 +88,8 @@ export default class HomeScreen extends React.Component {
     objjson = await object.json();
     this.props.navigation.navigate("Result", {obj: objjson, attrib: this.state.attrib, num: tofind});
     this.state.loading = false;
+    this.state.shipID = "";
+    this.state.PONum = "";
     this.forceUpdate();
   }
 
