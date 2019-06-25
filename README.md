@@ -28,4 +28,4 @@ Refer to the [HMAC developer page](https://developer.infornexus.com/api/api-over
 ## Notes
 Remember to remove environments.js before pushing to anything public.
 
-Problems with the image:  If it is anchored at the top outside of the tet view, shorter devices will scroll the text input over it.  However, on taller devices, anchoring the image to the text input view leaves a lot of ugly space above it.  Ideas would be greatly appreciated.
+Problems with the image:  If it is anchored at the top outside of the text view, shorter devices will scroll the text input over it.  However, on taller devices, anchoring the image to the text input view leaves a lot of ugly space above it.  Ideas would be greatly appreciated.
