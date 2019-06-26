@@ -9,7 +9,8 @@ import {
   View,
   Button,
   TextInput,
-  KeyboardAvoidingView
+  KeyboardAvoidingView,
+  Keyboard
 } from 'react-native';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import Spinner from 'react-native-loading-spinner-overlay';
@@ -41,6 +42,7 @@ export default class HomeScreen extends React.Component {
 
   async lookup(btn){
     this.state.loading = true;
+    Keyboard.dismiss();
     this.forceUpdate();  //forces render to reload and show loading
     var tofind = '';
     if(btn=="ShipID"){
