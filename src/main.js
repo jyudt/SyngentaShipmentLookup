@@ -104,7 +104,7 @@ export default class HomeScreen extends React.Component {
           textContent={'Loading...'}
           textStyle={styles.spinnerTextStyle}
         />
-      <Text>{`\n`}</Text>
+      <Text>{`\n\n\n`}</Text>
       <Image style={{width:230, height:Platform.OS === "ios" ? 70 : 0, justifyContent: 'flex-start'}} resizeMethod={'resize'} source={require('./images/Syngenta_Logo.png')}/>
         <View style={styles.container}>
           <Image style={{width:230, height:Platform.OS === "ios" ? 0 : 70, justifyContent: 'flex-start'}} resizeMethod={'resize'} source={require('./images/Syngenta_Logo.png')}/>

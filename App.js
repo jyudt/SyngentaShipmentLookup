@@ -4,7 +4,7 @@ import HomeScreen from './src/main';
 import ResultScreen from './src/result';
 
 const MainNavigator = createStackNavigator({
-  Home: {screen: HomeScreen},
+  Home: {screen: HomeScreen,navigationOptions: { header: null }},
   Result: {screen: ResultScreen},
 });
 
