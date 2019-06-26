@@ -26,7 +26,7 @@ Refer to the [HMAC developer page](https://developer.infornexus.com/api/api-over
   5. Run the project with:
 `react-native start` followed by `react-native run-android` or `react-native run-ios`, or open `syngentaNative.xcodeproj` to run ios
 ## Notes
-Remember to remove environments.js before pushing to anything public.
+Remember to remove environments.js before pushing to anything public (gitignore should handle this).
 
 Problems with the image:  If it is anchored at the top outside of the text view, shorter devices will scroll the text input over it.  However, on taller devices, anchoring the image to the text input view leaves a lot of ugly space above it.  Ideas would be greatly appreciated.
 
