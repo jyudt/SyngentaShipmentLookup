@@ -32,7 +32,8 @@ export default class HomeScreen extends React.Component {
     this.state.dataKey = Environments[0].dataKey;
     this.state.SAC = Environments[0].SAC;
     this.state.loading = false;
-    this.state.keyboardOpen = false;
+    this.shipInp = React.createRef();
+    this.POInp = React.createRef();
   };
   static navigationOptions = {
     title: 'Syngenta Shipment Lookup',
@@ -88,8 +89,8 @@ export default class HomeScreen extends React.Component {
     objjson = await object.json();
     this.props.navigation.navigate("Result", {obj: objjson, attrib: this.state.attrib, num: tofind});
     this.state.loading = false;
-    this.state.shipID = "";
-    this.state.PONum = "";
+    this.shipInp.clear();
+    this.POInp.clear();
     this.forceUpdate();
   }
 
@@ -105,9 +106,9 @@ export default class HomeScreen extends React.Component {
       <Image style={{width:230, height:Platform.OS === "ios" ? 70 : 0, justifyContent: 'flex-start'}} resizeMethod={'resize'} source={require('./images/Syngenta_Logo.png')}/>
         <View style={styles.container}>
           <Image style={{width:230, height:Platform.OS === "ios" ? 0 : 70, justifyContent: 'flex-start'}} resizeMethod={'resize'} source={require('./images/Syngenta_Logo.png')}/>
-          <TextInput style={styles.instructions} placeholder="Shipment ID" onChangeText={(shipID) => this.setState({shipID})}/><Button onPress={() => {this.lookup("ShipID")}} title="Search"/>
+          <TextInput style={styles.instructions} ref={input => { this.shipInp = input }} placeholder="Shipment ID" onChangeText={(shipID) => this.setState({shipID})}/><Button onPress={() => {this.lookup("ShipID")}} title="Search"/>
           <Text>{`\n\n\n`}</Text>
-          <TextInput style={styles.instructions} placeholder="PO Number" onChangeText={(PONum) => this.setState({PONum})}/><Button onPress={() => {this.lookup("PONum")}} title="Search"/>
+          <TextInput style={styles.instructions} ref={input => { this.POInp = input }} placeholder="PO Number" onChangeText={(PONum) => this.setState({PONum})}/><Button onPress={() => {this.lookup("PONum")}} title="Search"/>
           <Text>{`\n\n\n\n\n\n`}</Text>
         </View>
       </KeyboardAvoidingView>
